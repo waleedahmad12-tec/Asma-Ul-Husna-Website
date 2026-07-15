@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>99 Names of Allah | Asma-ul-Husna</title>
+     <link rel="icon" href="LOGO.jpg" type="image/jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ================= LOADER ================= -->
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <h2>Loading...</h2>
+    </div>
+
+    <!-- ================= SCROLL PROGRESS BAR ================= -->
+    <div class="progress-bar"></div>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <header class="hero">
+        <div class="overlay">
+            <h1>ﷲ</h1>
+            <h2>99 Beautiful Names of Allah</h2>
+            <p>
+                Learn • Listen • Reflect
+            </p>
+        </div>
+    </header>
+
+    <!-- ================= SEARCH & TOGGLE ================= -->
+
+    <section class="top-controls">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search any Name...">
+
+        </div>
+
+        <!-- Favorites open button (yeh pehle missing tha) -->
+        <button id="openFavoritesBtn" onclick="openFavorites()" title="View Favorites">
+            <i class="fa-solid fa-heart"></i>
+        </button>
+
+        <button id="themeBtn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </section>
+
+    <!-- ================= TODAY NAME ================= -->
+
+    <section class="today-name">
+        <h2>Today's Name</h2>
+        <div id="todayCard">
+            <!-- JS -->
+        </div>
+    </section>
+
+    <!-- ================= ALL NAMES ================= -->
+
+    <section class="all-names">
+        <h2>Asma-ul-Husna</h2>
+        <p>
+            Click any Name to hear its pronunciation.
+        </p>
+        <div
+            class="names-container"
+            id="namesContainer">
+            <!-- JavaScript will generate 99 cards -->
+        </div>
+    </section>
+
+    <!-- ================= AUDIO ================= -->
+
+    <audio id="audioPlayer"></audio>
+
+    <!-- ================= BACK TO TOP ================= -->
+
+    <button id="topBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ================= FAVORITES MODAL ================= -->
+
+    <div class="favorites-modal" id="favoritesModal">
+        <div class="favorites-content">
+            <div class="modal-header">
+                <h2>
+                    ❤️ Favorite Names
+                </h2>
+                <button id="closeModal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="favoriteList">
+                <!-- JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= DETAILS MODAL ================= -->
+    <div id="detailsModal" style="display:none;"></div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+        <p>
+            "To Allah belong the Most Beautiful Names, so call upon Him by them."
+        </p>
+        <small>
+            Designed with ❤️ using HTML, CSS & JavaScript
+        </small>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+     
+    <script src="script.js"></script>
+</body>
+
+</html>

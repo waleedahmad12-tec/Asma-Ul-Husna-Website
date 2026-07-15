@@ -1,0 +1,1478 @@
+/* =========================
+   LUXURY ISLAMIC THEME
+   (Light default + Dark mode)
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+/* =========================
+   DEFAULT = LIGHT THEME
+========================= */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#fdf6e3,#f3e6c8);
+
+    color:#2b2b2b;
+
+    min-height:100vh;
+
+    transition:background .4s ease, color .4s ease;
+
+}
+
+
+
+/* =========================
+        HERO
+========================= */
+
+
+.hero{
+
+    height:65vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+    rgba(255,255,255,.55),
+    rgba(255,248,230,.75)
+    ),
+
+    url("images/hero-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+.overlay{
+
+    animation:fadeIn 1.5s ease;
+
+}
+
+
+.overlay h1{
+
+    font-family:'Amiri',serif;
+
+    font-size:100px;
+
+    color:#a5750f;
+
+    text-shadow:
+    0 0 20px rgba(165,117,15,.4);
+
+}
+
+
+
+.overlay h2{
+
+    font-size:42px;
+
+    margin-top:10px;
+
+    color:#333;
+
+}
+
+
+
+.overlay p{
+
+    color:#555;
+
+    margin-top:15px;
+
+    font-size:18px;
+
+}
+
+
+
+/* =========================
+       SEARCH
+========================= */
+
+
+.top-controls{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:-40px auto 60px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+
+
+.search-box{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+
+    rgba(255,255,255,.7);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(165,117,15,.3);
+
+    padding:18px 25px;
+
+    border-radius:50px;
+
+}
+
+
+
+.search-box i{
+
+    color:#a5750f;
+
+    margin-right:15px;
+
+}
+
+
+
+.search-box input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#2b2b2b;
+
+    font-size:16px;
+
+}
+
+
+
+.search-box input::placeholder{
+
+    color:#888;
+
+}
+
+
+
+#themeBtn{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#a5750f;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+
+
+#themeBtn:hover{
+
+    transform:rotate(180deg);
+
+}
+
+
+
+/* =========================
+        TODAY CARD
+========================= */
+
+
+.today-name{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+
+.today-name h2{
+
+    color:#a5750f;
+
+    font-size:35px;
+
+}
+
+
+
+#todayCard{
+
+    margin-top:30px;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:
+
+    rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(165,117,15,.3);
+
+}
+
+
+
+/* =========================
+        ALL NAMES
+========================= */
+
+
+.all-names{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:70px auto;
+
+}
+
+
+
+.all-names h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:#a5750f;
+
+}
+
+
+
+.all-names p{
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+
+
+/* =========================
+        CARD GRID
+========================= */
+
+
+.names-container{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+/* part 2 css */
+/* =========================
+       PREMIUM NAME CARDS
+========================= */
+
+
+.name-card{
+
+    position:relative;
+
+    padding:35px 25px;
+
+    border-radius:25px;
+
+    background:
+
+    rgba(255,255,255,.8);
+
+    backdrop-filter:blur(15px);
+
+    border:
+
+    1px solid rgba(165,117,15,.25);
+
+    text-align:center;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+
+}
+
+
+
+/* Gold top line */
+
+.name-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    transparent,
+    #a5750f,
+    transparent
+    );
+
+}
+
+
+/* Hover */
+
+.name-card:hover{
+
+    transform:
+
+    translateY(-12px);
+
+    border-color:#a5750f;
+
+    box-shadow:
+
+    0 20px 40px rgba(165,117,15,.2);
+
+}
+
+
+
+/* =========================
+        ARABIC NAME
+========================= */
+
+
+.name-card h2{
+
+    font-family:'Amiri',serif;
+
+    font-size:55px;
+
+    color:#a5750f;
+
+    margin-bottom:20px;
+
+    text-shadow:
+
+    0 0 15px rgba(165,117,15,.25);
+
+}
+
+
+
+/* =========================
+       ENGLISH NAME
+========================= */
+
+
+.name-card h3{
+
+    font-size:24px;
+
+    color:#222;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+
+}
+
+
+
+/* =========================
+       MEANING
+========================= */
+
+
+.name-card p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+
+
+/* =========================
+       BUTTON AREA
+========================= */
+
+
+.card-buttons{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+
+/* =========================
+       BUTTON COMMON
+========================= */
+
+
+.card-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    border:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:18px;
+
+    transition:.3s;
+
+    color:white;
+
+}
+
+
+
+/* =========================
+       AUDIO BUTTON
+========================= */
+
+
+.listen-btn{
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #0B6E4F,
+    #18a57a
+    );
+
+}
+
+
+.listen-btn:hover{
+
+    transform:scale(1.15);
+
+    box-shadow:
+
+    0 0 20px #0B6E4F;
+
+}
+
+
+
+/* =========================
+       FAVORITE BUTTON
+========================= */
+
+
+.favorite-btn{
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #D4AF37,
+    #f6d365
+    );
+
+    color:#222;
+
+}
+
+
+
+.favorite-btn:hover{
+
+    transform:scale(1.15);
+
+    box-shadow:
+
+    0 0 20px #D4AF37;
+
+}
+
+
+
+.favorite-btn.active{
+
+    background:#e63946;
+
+    color:white;
+
+}
+
+
+
+/* =========================
+       COPY BUTTON
+========================= */
+
+
+.copy-btn{
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #666,
+    #444
+    );
+
+}
+
+
+
+.copy-btn:hover{
+
+    transform:scale(1.15);
+
+}
+
+
+
+/* =========================
+       TODAY CARD STYLE
+========================= */
+
+
+#todayCard h2{
+
+    font-family:'Amiri',serif;
+
+    font-size:70px;
+
+    color:#a5750f;
+
+}
+
+
+
+#todayCard h3{
+
+    font-size:30px;
+
+    margin:15px 0;
+
+    color:#222;
+
+}
+
+
+
+#todayCard p{
+
+    color:#555;
+
+}
+
+
+
+/* =========================
+       FAVORITE MODAL
+========================= */
+
+
+.favorites-content{
+
+    background:
+
+    #fffdf7;
+
+    border:
+
+    1px solid #a5750f;
+
+    border-radius:25px;
+
+    color:#222;
+
+}
+
+
+
+.modal-header{
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #a5750f,
+    #d9b45c
+    );
+
+    padding:20px;
+
+    color:#fff;
+
+}
+
+
+
+#favoriteList{
+
+    padding:25px;
+
+}
+
+
+
+.favorite-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    background:
+
+    rgba(165,117,15,.08);
+
+    border-radius:15px;
+
+}
+
+
+
+/* =========================
+       ANIMATION
+========================= */
+
+
+.name-card{
+
+    animation:
+
+    cardShow .8s ease;
+
+}
+
+
+
+@keyframes cardShow{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+/* part 3 */
+
+
+/* =========================
+      DARK MODE (distinct)
+========================= */
+
+
+body.dark{
+
+    background:
+
+    radial-gradient(
+    circle at top,
+    #123d32,
+    #020806
+    );
+
+    color:#fff;
+
+}
+
+
+body.dark .hero{
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.75)
+    ),
+
+    url("images/hero-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+body.dark .overlay h1{
+
+    color:#D4AF37;
+
+    text-shadow:0 0 20px rgba(212,175,55,.6);
+
+}
+
+
+body.dark .overlay h2{
+
+    color:#fff;
+
+}
+
+
+body.dark .overlay p{
+
+    color:#ddd;
+
+}
+
+
+body.dark .search-box,
+body.dark #todayCard,
+body.dark .name-card{
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    color:#fff;
+
+    border-color:rgba(212,175,55,.25);
+
+}
+
+
+body.dark .search-box input{
+
+    color:#fff;
+
+}
+
+
+body.dark .search-box input::placeholder{
+
+    color:#ccc;
+
+}
+
+
+body.dark #themeBtn{
+
+    background:#D4AF37;
+
+    color:#111;
+
+}
+
+
+body.dark .today-name h2,
+body.dark .all-names h2,
+body.dark #todayCard h2,
+body.dark .name-card h2{
+
+    color:#D4AF37;
+
+}
+
+
+body.dark .all-names p,
+body.dark #todayCard p,
+body.dark .name-card p{
+
+    color:#ccc;
+
+}
+
+
+body.dark .name-card h3,
+body.dark #todayCard h3{
+
+    color:#fff;
+
+}
+
+
+body.dark .favorites-content{
+
+    background:#071c15;
+
+    border-color:#D4AF37;
+
+    color:#fff;
+
+}
+
+
+body.dark .modal-header{
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #0B6E4F,
+    #06382a
+    );
+
+}
+
+
+body.dark .favorite-item{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+body.dark footer{
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #020806,
+    #06382a
+    );
+
+    border-top-color:rgba(212,175,55,.3);
+
+}
+
+
+
+/* =========================
+       LOADER
+========================= */
+
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#fdf6e3;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:9999;
+
+}
+
+
+body.dark .loader{
+
+    background:#04140f;
+
+}
+
+
+
+.loader-circle{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    border:
+
+    6px solid rgba(165,117,15,.2);
+
+    border-top-color:#a5750f;
+
+    animation:rotate 1s linear infinite;
+
+}
+
+
+body.dark .loader-circle{
+
+    border-color:rgba(212,175,55,.2);
+
+    border-top-color:#D4AF37;
+
+}
+
+
+
+.loader h2{
+
+    margin-top:20px;
+
+    color:#a5750f;
+
+}
+
+
+body.dark .loader h2{
+
+    color:#D4AF37;
+
+}
+
+
+
+@keyframes rotate{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+
+.loader.hidden{
+
+    display:none;
+
+}
+
+
+
+/* =========================
+      PROGRESS BAR
+========================= */
+
+
+.progress-bar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    height:5px;
+
+    width:0%;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #0B6E4F,
+    #D4AF37
+    );
+
+    z-index:99999;
+
+}
+
+
+
+
+/* =========================
+      BACK TO TOP
+========================= */
+
+
+#topBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#a5750f;
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    display:none;
+
+    transition:.3s;
+
+    z-index:1000;
+
+}
+
+
+body.dark #topBtn{
+
+    background:#D4AF37;
+
+    color:#111;
+
+}
+
+
+
+#topBtn:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    box-shadow:
+
+    0 0 25px #D4AF37;
+
+}
+
+
+
+
+/* =========================
+       FOOTER
+========================= */
+
+
+footer{
+
+    margin-top:80px;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #f3e6c8,
+    #fdf6e3
+    );
+
+    border-top:
+
+    1px solid rgba(165,117,15,.3);
+
+}
+
+
+
+footer p{
+
+    color:#a5750f;
+
+    font-size:18px;
+
+}
+
+
+
+footer small{
+
+    color:#777;
+
+    display:block;
+
+    margin-top:15px;
+
+}
+
+
+body.dark footer p{
+
+    color:#D4AF37;
+
+}
+
+
+body.dark footer small{
+
+    color:#aaa;
+
+}
+
+
+
+
+/* =========================
+       SCROLL ANIMATION
+========================= */
+
+
+.fade-up{
+
+    animation:
+
+    fadeUp .8s ease forwards;
+
+}
+
+
+
+@keyframes fadeUp{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+/* =========================
+       RESPONSIVE TABLET
+========================= */
+
+
+@media(max-width:900px){
+
+
+.hero{
+
+    height:55vh;
+
+}
+
+
+
+.overlay h1{
+
+    font-size:70px;
+
+}
+
+
+
+.overlay h2{
+
+    font-size:32px;
+
+}
+
+
+
+.names-container{
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+/* =========================
+       MOBILE
+========================= */
+
+
+@media(max-width:600px){
+
+
+
+.hero{
+
+    height:50vh;
+
+}
+
+
+
+.overlay h1{
+
+    font-size:55px;
+
+}
+
+
+
+.overlay h2{
+
+    font-size:24px;
+
+}
+
+
+
+.overlay p{
+
+    font-size:14px;
+
+}
+
+
+
+
+.top-controls{
+
+    flex-direction:column;
+
+    margin-top:-30px;
+
+}
+
+
+
+#themeBtn{
+
+    width:55px;
+
+    height:55px;
+
+}
+
+
+
+
+.names-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.name-card{
+
+    padding:25px 18px;
+
+}
+
+
+
+.name-card h2{
+
+    font-size:42px;
+
+}
+
+
+
+.name-card h3{
+
+    font-size:20px;
+
+}
+
+
+
+#todayCard{
+
+    padding:25px;
+
+}
+
+
+
+#todayCard h2{
+
+    font-size:50px;
+
+}
+
+
+
+
+.card-buttons{
+
+    gap:10px;
+
+}
+
+
+
+.card-btn{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+
+
+#topBtn{
+
+    right:15px;
+
+    bottom:15px;
+
+    width:48px;
+
+    height:48px;
+
+}
+
+
+}
+
+
+
+
+/* =========================
+       SMALL MOBILE
+========================= */
+
+
+@media(max-width:400px){
+
+
+.overlay h2{
+
+    font-size:21px;
+
+}
+
+
+.name-card h2{
+
+    font-size:36px;
+
+}
+
+
+.name-card p{
+
+    font-size:14px;
+
+}
+
+
+}
