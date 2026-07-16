@@ -894,13 +894,13 @@ function displayNames(data){
 displayNames(names);
 
 // ==============================
-// Today's Name (random on load)
+// Today's Name (Asma-ul-Husna hamesha fixed rahega)
 // ==============================
 
 function showTodayName(){
 
-    const random = Math.floor(Math.random()*names.length);
-    const item = names[random];
+    // Pehle random name choose hota tha, ab hamesha names[0] (Asma-ul-Husna) show hoga
+    const item = names[0];
 
     todayCard.innerHTML = `
     <h2>${item.arabic}</h2>
@@ -1220,14 +1220,13 @@ function closeDetails(){
 }
 
 // ==============================
-// RANDOM NAME OF THE DAY (based on date of month)
+// TODAY'S NAME (ab hamesha Asma-ul-Husna fixed hai, date-based nahi)
 // ==============================
 
 function updateDailyName(){
 
-    const today = new Date().getDate();
-    const index = today % names.length;
-    const item = names[index];
+    // Pehle date ke hisaab se rotate hota tha, ab hamesha names[0] (Asma-ul-Husna) fixed hai
+    const item = names[0];
     const daily = document.getElementById("todayCard");
 
     if(daily && item){
