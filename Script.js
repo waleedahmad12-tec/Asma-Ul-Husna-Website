@@ -1,6 +1,3 @@
-// ==============================
-// 99 Names Data
-// ==============================
 
 const names = [
     {
@@ -814,10 +811,7 @@ const names = [
 
 ];
 
-// ==============================
-// Safe localStorage helpers
-// (Prevents one bad access from breaking the ENTIRE script)
-// ==============================
+
 
 function safeGet(key, fallback){
     try{
@@ -837,24 +831,15 @@ function safeSet(key, value){
     }
 }
 
-// ==============================
-// State
-// ==============================
 
 let favorites = safeGet("favorites", []);
 let currentAudio = null;
 
-// ==============================
-// Elements
-// ==============================
 
 const namesContainer = document.getElementById("namesContainer");
 const todayCard = document.getElementById("todayCard");
 const searchInput = document.getElementById("searchInput");
 
-// ==============================
-// Create Cards
-// ==============================
 
 function displayNames(data){
 
@@ -893,13 +878,10 @@ function displayNames(data){
 
 displayNames(names);
 
-// ==============================
-// Today's Name (Asma-ul-Husna hamesha fixed rahega)
-// ==============================
+
 
 function showTodayName(){
 
-    // Pehle random name choose hota tha, ab hamesha names[0] (Asma-ul-Husna) show hoga
     const item = names[0];
 
     todayCard.innerHTML = `
@@ -915,9 +897,6 @@ function showTodayName(){
 
 showTodayName();
 
-// ==============================
-// Search
-// ==============================
 
 searchInput.addEventListener("keyup", ()=>{
 
@@ -934,10 +913,6 @@ searchInput.addEventListener("keyup", ()=>{
 
 });
 
-// ==============================
-// Audio
-// ==============================
-
 function playAudio(file){
 
     if(currentAudio){
@@ -953,9 +928,6 @@ function playAudio(file){
 
 }
 
-// ==============================
-// Copy (with toast)
-// ==============================
 
 function copyName(name){
 
@@ -981,9 +953,7 @@ function copyName(name){
 
 }
 
-// ==============================
-// FAVORITES SYSTEM
-// ==============================
+
 
 function toggleFavorite(name, btn){
 
@@ -995,7 +965,6 @@ function toggleFavorite(name, btn){
 
     safeSet("favorites", favorites);
 
-    // instantly update the heart button that was clicked
     if(btn){
         btn.classList.toggle("active", favorites.includes(name));
     }
@@ -1047,7 +1016,6 @@ function removeFavorite(name){
 
     showFavorites();
 
-    // also un-highlight the heart on the main grid if it's visible
     displayNames(
         searchInput && searchInput.value
             ? names.filter(item =>
@@ -1058,9 +1026,7 @@ function removeFavorite(name){
 
 }
 
-// ==============================
-// FAVORITES MODAL (open / close)
-// ==============================
+
 
 function openFavorites(){
     const favoritesModal = document.getElementById("favoritesModal");
@@ -1078,10 +1044,6 @@ if(closeModal && favoritesModal){
         favoritesModal.style.display = "none";
     };
 }
-
-// ==============================
-// DARK MODE
-// ==============================
 
 const themeBtn = document.getElementById("themeBtn");
 
@@ -1103,7 +1065,6 @@ if(themeBtn){
 
 }
 
-// Load saved dark mode on page load
 if(safeGet("darkMode", false) === true){
 
     document.body.classList.add("dark");
@@ -1114,9 +1075,6 @@ if(safeGet("darkMode", false) === true){
 
 }
 
-// ==============================
-// LOADER
-// ==============================
 
 window.addEventListener("load", ()=>{
     const loader = document.querySelector(".loader");
@@ -1125,9 +1083,6 @@ window.addEventListener("load", ()=>{
     }
 });
 
-// ==============================
-// SCROLL PROGRESS BAR
-// ==============================
 
 window.addEventListener("scroll", ()=>{
 
@@ -1142,9 +1097,6 @@ window.addEventListener("scroll", ()=>{
 
 });
 
-// ==============================
-// BACK TO TOP BUTTON
-// ==============================
 
 const topBtn = document.getElementById("topBtn");
 
@@ -1162,9 +1114,6 @@ if(topBtn){
     });
 }
 
-// ==============================
-// SCROLL REVEAL ANIMATION
-// ==============================
 
 function revealCards(){
 
@@ -1184,9 +1133,6 @@ function revealCards(){
 window.addEventListener("scroll", revealCards);
 revealCards();
 
-// ==============================
-// READ MORE MODAL
-// ==============================
 
 function openDetails(id){
 
@@ -1219,13 +1165,9 @@ function closeDetails(){
     }
 }
 
-// ==============================
-// TODAY'S NAME (ab hamesha Asma-ul-Husna fixed hai, date-based nahi)
-// ==============================
 
 function updateDailyName(){
 
-    // Pehle date ke hisaab se rotate hota tha, ab hamesha names[0] (Asma-ul-Husna) fixed hai
     const item = names[0];
     const daily = document.getElementById("todayCard");
 
@@ -1242,10 +1184,6 @@ function updateDailyName(){
 
 updateDailyName();
 
-// ==============================
-// CLOSE MODALS ON OUTSIDE CLICK
-// ==============================
-
 window.addEventListener("click", (e)=>{
 
     const detailsModal = document.getElementById("detailsModal");
@@ -1260,8 +1198,7 @@ window.addEventListener("click", (e)=>{
 
 });
 
-// ==============================
-// INITIAL LOAD
+
 // ==============================
 
 window.addEventListener("DOMContentLoaded", ()=>{
