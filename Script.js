@@ -1198,9 +1198,6 @@ window.addEventListener("click", (e)=>{
 
 });
 
-
-// ==============================
-
 window.addEventListener("DOMContentLoaded", ()=>{
     showFavorites();
 });
